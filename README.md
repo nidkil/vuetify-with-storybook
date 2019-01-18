@@ -2,7 +2,7 @@
   <img src="./public/vuetify-with-storybook-logo.png" alt="Setting up Storybook with Vuetify logo" width="200"/>
 </p>
 <p align="center" style="font-size: 2.0em"><b>Setting up Storybook with Vuetify</b></p>
-<p align="center" style="font-size: 1.0em">Learning how to set it up the proper way</p>
+<p align="center" style="font-size: 1.0em">Learn how to set and use it the proper way</p>
 
 [![Vue 2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/)
 [![Vue CLI 3](https://img.shields.io/badge/vue%20cli-3-brightgreen.svg)](https://cli.vuejs.org/)
@@ -41,7 +41,7 @@ I struggled to get Storybook to work with Vuetify. In this repository I have doc
 
 The solution was inspired by [vue-vuetify-storybook](https://github.com/jsilva-pt/vue-vuetify-storybook), which shows a working example of Vue CLI 3, Vuetify and Storybook and a lot of other goodies. I tried to setup Storybook with my own repository taking this repo as an example, but I failed. The problem with this repository is, that it does not explain how it works. It also uses different configurations for the application itself and Storybook. This means that a component can work for the one but not for the other. I wanted a shared configuration, so that when a component works in either you no it works for the other. That shared configuration is the `./src/plugins/vuetify.js` plugin file that initializes Vuetify.
 
-So you have the choice to follow along and configure your project yourself and understand what is happening or just clone and use this repository. The choice is yours. Are you going to choose the red pill or the blue pill?
+So you have the choice to follow along and configure your project yourself and really understand how it works or just clone and use the repository. The choice is yours. Are you going to choose the red pill or the blue pill?
 
 [Go to Table of Contents](#toc)
 
@@ -437,20 +437,20 @@ npm run test:unit
 
 Currently the following is on the roadmap.
 
-- i18n
-- Add storybook-addon-vue-info
-- Add actions-addon
-- Add backgrounds-addon
-- Add chapters-addon
-- Add console-addon
-- Add info-addon
-- Add intl-addon
-- Add knobs-addon
-- Add links-addon
-- Add notes-addon
-- Add options-addon
-- Add storysource-addon
-- Add viewport-addon
+[ ] i18n
+[ ] Add storybook-addon-vue-info
+[ ] Add actions-addon
+[ ] Add backgrounds-addon
+[ ] Add chapters-addon
+[ ] Add console-addon
+[ ] Add info-addon
+[ ] Add intl-addon
+[ ] Add knobs-addon
+[ ] Add links-addon
+[ ] Add notes-addon
+[ ] Add options-addon
+[ ] Add storysource-addon
+[ ] Add viewport-addon
 
 Any other suggestions? Please submit an issue.
 
@@ -466,6 +466,8 @@ We welcome pull requests! What follows is the simplified version of the contribu
 4. Commit your changes: `npm run commit`
 5. Push to the branch: `git push origin my-new-feature`
 6. Submit a pull request :-)
+
+> **TIP** Learn all about forking a repo [here](https://help.github.com/articles/fork-a-repo/). More information on cloning a repo [here](https://github.com/nidkil/vuetify-with-storybook).
 
 [Go to Table of Contents](#toc)
 
