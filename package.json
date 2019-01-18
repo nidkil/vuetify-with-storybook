@@ -31,7 +31,7 @@
     "lint:error-only": "vue-cli-service lint --quiet --format codeframe src tests ./config/storybook",
     "storybook:build": "vue-cli-service storybook:build -c config/storybook",
     "storybook:serve": "vue-cli-service storybook:serve -p 6006 -c config/storybook",
-    "test:unit": "vue-cli-service test:unit",
+    "test:unit": "vue-cli-service test:unit --verbose",
     "readme:toc": "markdown-toc README.md -i --maxdepth=2 --bullets=-",
     "release": "nodenv --env ./.env.local --exec release-it --verbose",
     "chk-pkg-upd": "ncu"
