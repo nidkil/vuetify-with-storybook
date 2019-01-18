@@ -4,6 +4,11 @@
 <p align="center" style="font-size: 2.0em"><b>Setting up Storybook with Vuetify</b></p>
 <p align="center" style="font-size: 1.0em">Learning how to setup Storybook with Vuetify the proper way</p>
 
+[![Vue 2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/)
+[![Vue CLI 3](https://img.shields.io/badge/vue%20cli-3-brightgreen.svg)](https://cli.vuejs.org/)
+[![Vuetify](https://img.shields.io/badge/vuetify-1.3.x-blue.svg)](https://http://vuetifyjs.com//)
+[![Storybook](https://img.shields.io/badge/storybook-4.1.x-ff69b4.svg)](https://storybook.js.org/)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)
 [![HitCount](http://hits.dwyl.com/nidkil/vuetify-with-storybook.svg)](http://hits.dwyl.com/dwyl/start-here)
 
