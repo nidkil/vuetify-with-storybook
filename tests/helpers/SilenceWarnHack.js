@@ -1,6 +1,16 @@
 /**
- * This is a hack to suppress the Vuetify Multiple instances of Vue detected warning.
+ * This is a hack to suppress the Vuetify Multiple instances of Vue detected warning message when createLocalVue is called.
  * See this post https://wordpress.com/post/nidkil.me/1950 for more information.
+ *
+ * @example
+ * // Suppress Vuetify warning message when createLocalVue is called
+ * let localVue = null
+ * beforeEach(() => {
+ *   silenceWarnHack.enable()
+ *   localVue = createLocalVue()
+ *   localVue.use(Vuetify)
+ *   silenceWarnHack.disable()
+ * }
  */
 export class SilenceWarnHack {
   constructor() {
