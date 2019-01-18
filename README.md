@@ -437,20 +437,20 @@ npm run test:unit
 
 Currently the following is on the roadmap.
 
-[ ] i18n
-[ ] Add storybook-addon-vue-info
-[ ] Add actions-addon
-[ ] Add backgrounds-addon
-[ ] Add chapters-addon
-[ ] Add console-addon
-[ ] Add info-addon
-[ ] Add intl-addon
-[ ] Add knobs-addon
-[ ] Add links-addon
-[ ] Add notes-addon
-[ ] Add options-addon
-[ ] Add storysource-addon
-[ ] Add viewport-addon
+- [ ] i18n
+- [ ] Add storybook-addon-vue-info
+- [ ] Add actions-addon
+- [ ] Add backgrounds-addon
+- [ ] Add chapters-addon
+- [ ] Add console-addon
+- [ ] Add info-addon
+- [ ] Add intl-addon
+- [ ] Add knobs-addon
+- [ ] Add links-addon
+- [ ] Add notes-addon
+- [ ] Add options-addon
+- [ ] Add storysource-addon
+- [ ] Add viewport-addon
 
 Any other suggestions? Please submit an issue.
 
