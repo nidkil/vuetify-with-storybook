@@ -16,8 +16,24 @@ I struggled to get Storybook to work with Vuetify. In this repository I have doc
 <a name="toc">
   <details>
     <strong>Table of Contents</strong>
-    <!-- toc -->
-  </details>
+
+<!-- toc -->
+
+- [Inspiration](#inspiration)
+- [Built with](#built-with)
+- [Important](#important)
+- [Useful links](#useful-links)
+- [Create project manually](#create-project-manually)
+- [Project setup](#project-setup)
+- [Misc](#misc)
+- [Roadmap](#roadmap)
+- [Contributing](#contributing)
+- [Support & brag about us](#support--brag-about-us)
+- [Author](#author)
+
+<!-- tocstop -->
+
+</details>
 </a>
 
 ## Inspiration

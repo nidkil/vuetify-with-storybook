@@ -1,9 +1,8 @@
 {
   "increment": "conventional:angular",
   "scripts" : {
-    "beforeStart": "npm run test:unit && npm run lint:error-only",
+    "beforeStart": "npm run lint:error-only && npm run test:unit && npm run readme:toc",
     "afterBump": "conventional-changelog -p angular -i CHANGELOG.md -s",
-    "beforeStage": "npm run build",
     "changelog": "conventional-changelog -p angular | tail -n +3"
   },
   "git" : {
