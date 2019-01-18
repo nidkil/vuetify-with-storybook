@@ -2,7 +2,7 @@
   <img src="./public/vuetify-with-storybook-logo.png" alt="Setting up Storybook with Vuetify logo" width="200"/>
 </p>
 <p align="center" style="font-size: 2.0em"><b>Setting up Storybook with Vuetify</b></p>
-<p align="center" style="font-size: 1.0em">Learning how to setup Storybook with Vuetify the proper way</p>
+<p align="center" style="font-size: 1.0em">Learning how to set it up the proper way</p>
 
 [![Vue 2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/)
 [![Vue CLI 3](https://img.shields.io/badge/vue%20cli-3-brightgreen.svg)](https://cli.vuejs.org/)
@@ -16,11 +16,8 @@
 
 I struggled to get Storybook to work with Vuetify. In this repository I have documented how I got it up and running the proper way. Hopefully it will give others a kick start.
 
-> Setting up Storybook with Vuetify.
-
 <a name="toc">
-  <details>
-    <strong>Table of Contents</strong>
+  <strong>Table of Contents</strong>
 
 <!-- toc -->
 
@@ -38,12 +35,11 @@ I struggled to get Storybook to work with Vuetify. In this repository I have doc
 
 <!-- tocstop -->
 
-</details>
 </a>
 
 ## Inspiration
 
-The solution was inspired by [vue-vuetify-storybook](https://github.com/jsilva-pt/vue-vuetify-storybook), which shows a working example of Vue CLI 3, Vuetify and Storybook and a lot of other goodies. I tried to setup Storybook with my own repository taking this one as an example, but failed. The problem with this repository is, that it does not explain how it works. It also uses different configurations for the application itself and Storybook. This means that a component could work in the one but not in the other. I wanted a shared configuration, so that when a component works in either you no it works in the other. That shared configuration is the `./src/plugins/vuetify.js` plugin initialization file.
+The solution was inspired by [vue-vuetify-storybook](https://github.com/jsilva-pt/vue-vuetify-storybook), which shows a working example of Vue CLI 3, Vuetify and Storybook and a lot of other goodies. I tried to setup Storybook with my own repository taking this repo as an example, but I failed. The problem with this repository is, that it does not explain how it works. It also uses different configurations for the application itself and Storybook. This means that a component can work for the one but not for the other. I wanted a shared configuration, so that when a component works in either you no it works for the other. That shared configuration is the `./src/plugins/vuetify.js` plugin file that initializes Vuetify.
 
 So you have the choice to follow along and configure your project yourself and understand what is happening or just clone and use this repository. The choice is yours. Are you going to choose the red pill or the blue pill?
 
@@ -53,7 +49,7 @@ So you have the choice to follow along and configure your project yourself and u
 
 - [Vue CLI 3 v3.0.4](https://cli.vuejs.org/)
 - [Vue 2 v2.5.21](https://vuejs.org/)
-- [Vuetify v1.3.0](https://vuetifyjs.com/en/) with a la carte setup
+- [Vuetify v1.3.0](https://vuetifyjs.com/en/) using the a la carte setup
 - [Storybook v4.1.0](https://storybook.js.org/)
 - [Material Design Icons (MDI)](https://materialdesignicons.com/)
 
@@ -61,9 +57,12 @@ So you have the choice to follow along and configure your project yourself and u
 
 ## Important
 
-The following points are key to getting Storybook to work correctly with Vuetify:
+The following two points are key to getting Storybook to work correctly with Vuetify:
 
-1) The Vuetify components must be imported individually from 'vuetify/lib' and added as components to `Vue.use` when initializing Vuetify, see the [Vuetify documentation](https://vuetifyjs.com/en/framework/a-la-carte#importing-components) for more information. If a story isn't displaying correctly in Storybook that does work when running normally, always check that all Vuetify components it uses are imported!
+1) The Vuetify components must be imported individually from 'vuetify/lib' and added as components to `Vue.use` when initializing Vuetify, see the [Vuetify documentation](https://vuetifyjs.com/en/framework/a-la-carte#importing-components) for more information. This is done in the `./src/plugins/vuetify.js` plugin file. If a story isn't displaying correctly in Storybook and it does work correctly when running normally, always check that all Vuetify components it uses are imported!
+
+  > **IMPORTANT** Storybook does not work with `vuetify-loader`, at least I did not get it to work.
+
 2) The font must be imported using the `preview-head.html` file.
 
 [Go to Table of Contents](#toc)
@@ -82,7 +81,7 @@ The following points are key to getting Storybook to work correctly with Vuetify
 
 The following section describes the steps that need to be execute to create a project with Vue, Vuetify and Storybook manually.
 
-- Create a Vue project
+- Create a Vue project:
 
     ```
     $ mkdir sb-test & cd sb-test
@@ -104,7 +103,7 @@ The following section describes the steps that need to be execute to create a pr
     ? Save this as a preset for future projects? (y/N) n
     ```
 
-- Add Vuetify
+- Add Vuetify:
 
     ```
     $ vue add vuetify
@@ -260,7 +259,7 @@ The following section describes the steps that need to be execute to create a pr
     $ vue add storybook
     ```
 
-    The Storybook plugin injects two additional commands, `storybook:build` and `storybook:serve` into vue-cli-service. You can see all injected commands by running:
+    The Storybook plugin injects two additional commands, `storybook:build` and `storybook:serve` into vue-cli-service. You can see all injected Vue CLI 3 commands by running:
 
     ```
     $ npx vue-cli-service help
@@ -294,6 +293,12 @@ The following section describes the steps that need to be execute to create a pr
 
     configure(loadStories, module);
     ```
+
+    There are three things to note here:
+
+    1. Vuetify is initialized using the `./src/plugins/vuetify.js` file.
+    2. The icons are loaded with the `import "@mdi/font/css/materialdesignicons.css";` statement.
+    3. The decorator wraps every story in the `v-app` tag ensuring Vuetify tags are displayed correctly.
 
 - Add the following to `./src/stories/common.stories.js`:
 
@@ -477,4 +482,4 @@ Please let the world know about us! Brag about us using Twitter, email, blog, Di
 **nidkil** © [nidkil](https://github.com/nidkil), released under the [MIT](LICENSE.md) license.
 Authored and maintained by nidkil with help from [contributors](https://github.com/nidkil/vuetify-with-storybook/contributors).
 
-> [Website](https://github.com/nidkil) · GitHub [@nidkil](https://github.com/nidkil) · Twitter [@nidkil](https://twitter.com/nidkil)
+> [Website](https://nidkil.me) · GitHub [@nidkil](https://github.com/nidkil) · Twitter [@nidkil](https://twitter.com/nidkil)
