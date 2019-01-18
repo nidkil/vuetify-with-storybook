@@ -1,0 +1,14 @@
+os:
+  - linux
+language: node_js
+node_js:
+  - "8"
+  - "10"
+  - "node"
+sudo: false
+cache:
+  - "packages"
+script:
+  - npm test:unit
+after_script:
+  - npm run coveralls
