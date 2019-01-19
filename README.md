@@ -4,6 +4,7 @@
 <p align="center" style="font-size: 2.0em"><b>Setting up Storybook with Vuetify</b></p>
 <p align="center" style="font-size: 1.0em">Learn how to set and use it the proper way</p>
 
+[![Build status](https://travis-ci.com/nidkil/vuetify-with-storybook.svg?branch=master)](https://travis-ci.com/nidkil/vuetify-with-storybook)
 [![Vue 2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/)
 [![Vue CLI 3](https://img.shields.io/badge/vue%20cli-3-brightgreen.svg)](https://cli.vuejs.org/)
 [![Vuetify](https://img.shields.io/badge/vuetify-1.3.x-blue.svg)](https://http://vuetifyjs.com//)
@@ -461,13 +462,13 @@ Any other suggestions? Please submit an issue.
 We welcome pull requests! What follows is the simplified version of the contribution process, please read [here](./CONTRIBUTING.md) to fully understand our contribution policy and [here](./CODE-OF-CONDUCT.md) to understand our code of conduct.
 
 1. Fork the repository [here](https://github.com/nidkil/vuetify-with-storybook)!
-2. Create your feature branch: `git checkout -b my-new-feature`
+2. Create your feature branch: `git checkout -b my_new_feature`
 3. If relevant, don't forget to add your tests
 4. Commit your changes: `npm run commit`
 5. Push to the branch: `git push origin my-new-feature`
 6. Submit a pull request :-)
 
-> **TIP** Learn all about forking a repo [here](https://help.github.com/articles/fork-a-repo/). More information on cloning a repo [here](https://github.com/nidkil/vuetify-with-storybook).
+> **TIP** Learn all about forking a repo [here](https://help.github.com/articles/fork-a-repo/). More information on cloning a repo [here](https://help.github.com/articles/cloning-a-repository/).
 
 [Go to Table of Contents](#toc)
 

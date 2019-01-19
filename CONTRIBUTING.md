@@ -72,7 +72,7 @@ Somethings to keep in mind
 
 ## Set up the project on your machine
 
-First fork the the project on [GitHub](https://github.com/nidkil/vuetify-with-storybook). Learn all about forking a repo [here](https://help.github.com/articles/fork-a-repo/). More information on cloning a repo [here](https://github.com/nidkil/vuetify-with-storybook).
+First fork the the project on [GitHub](https://github.com/nidkil/vuetify-with-storybook). Learn all about forking a repo [here](https://help.github.com/articles/fork-a-repo/). More information on cloning a repo [here](https://help.github.com/articles/cloning-a-repository/).
 
 ```bash
 git clone https://github.com/nidkil/vuetify-with-storybook
