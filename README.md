@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./public/vuetify-with-storybook-logo.png" alt="Setting up Storybook with Vuetify logo" width="200"/>
+  <img src="./public/vuetify-with-storybook-logo.png" alt="Setting up Storybook with Vuetify logo" width="500"/>
 </p>
 <p align="center" style="font-size: 2.0em"><b>Setting up Storybook with Vuetify</b></p>
 <p align="center" style="font-size: 1.0em">Learn how to set and use it the proper way</p>
