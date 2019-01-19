@@ -1,7 +1,7 @@
 {
   "increment": "conventional:angular",
   "scripts" : {
-    "beforeStart": "npm run lint:error-only && npm run test:unit && npm run readme:toc",
+    "beforeStart": "lint-staged && npm run test:unit && npm run readme:toc",
     "afterBump": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "changelog": "conventional-changelog -p angular | tail -n +3"
   },
