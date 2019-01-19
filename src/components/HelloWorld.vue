@@ -15,16 +15,47 @@
 
       <v-flex xs12 my-3>
         <v-layout
+          justify-center
+          row
+          wrap
+        >
+          <v-flex xs4 sm3 md2 pa-2>
+            <v-btn-plus @click="onClick" label="Cool" color="red" type="outline" colorHover="green" />
+          </v-flex>
+          <v-flex xs4 sm3 md2 pa-2>
+            <v-btn-plus icon="mdi-account" tooltip="Wow!" type="icon" />
+          </v-flex>
+          <v-flex xs4 sm3 md2 pa-2>
+            <v-btn-plus icon="mdi-account" tooltip="Wow!" type="fab" color="blue" />
+          </v-flex>
+          <v-flex xs4 sm3 md2 pa-2>
+            <v-btn-plus icon="mdi-account" tooltip="Wow!" type="depressed" color="orange" />
+          </v-flex>
+          <v-flex xs4 sm3 md2 pa-2>
+            <v-btn-plus icon="mdi-account" tooltip="Wow!" type="flat" color="red" />
+          </v-flex>
+          <v-flex xs4 sm3 md2 pa-2>
+            <v-btn-plus icon="mdi-account" tooltip="Wow!" type="round" color="purple" />
+          </v-flex>
+          <v-flex xs4 sm3 md4 pa-2>
+            <v-btn-plus label="Account" tooltip="Wow!" type="block" color="purple" />
+          </v-flex>
+        </v-layout>
+      </v-flex>
+
+      <v-flex xs12 my-3>
+        <v-layout
             justify-center
             row
+            wrap
         >
-          <v-flex xs4 pa-2>
+          <v-flex xs8 sm7 md4 lg3 pa-2>
             <v-stats-card title="1.200" sub-title="assigned credits" color="primary" icon="mdi-plus" />
           </v-flex>
-          <v-flex xs4 pa-2>
+          <v-flex xs8 sm7 md4 lg3 pa-2>
             <v-stats-card title="1.000" sub-title="used credits" color="secondary" icon="mdi-minus" />
           </v-flex>
-          <v-flex xs4 pa-2>
+          <v-flex xs8 sm7 md4 lg3 pa-2>
             <v-stats-card title="200" sub-title="remaining credits" color="accent" icon="mdi-sigma" />
           </v-flex>
         </v-layout>
@@ -102,7 +133,9 @@
 </template>
 
 <script>
+import VBtnPlus from '@/components/common/VBtnPlus'
 import VStatsCard from '@/components/common/VStatsCard'
+
 export default {
   props: {
     msg: {
@@ -163,7 +196,13 @@ export default {
       }
     ]
   }),
+  methods: {
+    onClick: function() {
+      console.log('Clicked!')
+    }
+  },
   components: {
+    VBtnPlus,
     VStatsCard
   }
 }
