@@ -74,13 +74,12 @@ The following two points are key to getting Storybook to work correctly with Vue
 - [Storybook addons](https://github.com/storybooks/storybook/tree/next/addons)
 - [Storybook Vue example](https://github.com/storybooks/storybook/tree/next/examples/vue-kitchen-sink)
 - [vue-cli-plugin-storybook](https://github.com/storybooks/vue-cli-plugin-storybook)
-- [storybook-addon-vue-info](https://github.com/pocka/storybook-addon-vue-info)
 
 [Go to Table of Contents](#toc)
 
 ## Create project manually
 
-The following section describes the steps that need to be execute to create a project with Vue, Vuetify and Storybook manually.
+The following section describes the steps that need to be execute to manually create a project with Vue CLI 3, Vuetify and vue-cli-plugin-vuetify.
 
 - Create a Vue project:
 
@@ -248,13 +247,13 @@ The following section describes the steps that need to be execute to create a pr
     $ npm run lint
     ```
 
-- Test:
+- Test if the initial project is working correctly:
 
     ```
     $ npm run serve
     ```
 
-- Add Storybook:
+- Add Storybook using Vue CLI 3 plugin vue-cli-plugin-vuetify. The plugin is installed automatically by Vue CLI 3 when executing the following command:
 
     ```
     $ vue add storybook
@@ -335,6 +334,30 @@ The following section describes the steps that need to be execute to create a pr
     ```
 
 [Go to Table of Contents](#toc)
+
+## Addon
+
+This section only describes those addon's that require special instructions to work correctly with Vue or Vuetify.
+
+### addon-background
+
+To get the background addon to work with Vuetify requires a hack to VApp, as it sets and controls the background color. To let the background addon control the background color we need to set the background of VApp to transparent. In `./config/storybook/config.js` change the following:
+
+```js
+addDecorator(() => ({
+  template: '<v-app><story/></v-app>',
+  style: '.theme--light.application { background-color: transparent; }'
+}))
+```
+
+To:
+
+```js
+addDecorator(() => ({
+  template: '<v-app style="background-color: transparent;"><story/></v-app>',
+  style: '.theme--light.application { background-color: transparent; }'
+}))
+```
 
 ## Project setup
 
@@ -440,8 +463,8 @@ Currently the following is on the roadmap.
 
 - [ ] i18n
 - [ ] Add storybook-addon-vue-info
-- [ ] Add actions-addon
-- [ ] Add backgrounds-addon
+- [x] Add [actions-addon](https://github.com/storybooks/storybook/tree/master/addons/actions)
+- [x] Add [backgrounds-addon](https://github.com/storybooks/storybook/tree/master/addons/backgrounds)
 - [ ] Add chapters-addon
 - [ ] Add console-addon
 - [ ] Add info-addon

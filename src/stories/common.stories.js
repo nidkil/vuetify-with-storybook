@@ -1,6 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
+import { withBackgrounds } from '@storybook/addon-backgrounds'
 import { wrapComponent } from './helpers/decorators'
 
 import VBtnPlus from '@/components/common/VBtnPlus.vue'
@@ -12,6 +13,9 @@ export const methods = {
 
 storiesOf('VBtnPlus', module)
   .addDecorator(story => wrapComponent(story, 'xl', 'xs2'))
+  .addDecorator(
+    withBackgrounds([{ name: 'twitter', value: '#00aced', default: true }, { name: 'facebook', value: '#3b5998' }])
+  )
   .add('text with defaults', () => ({
     components: { VBtnPlus },
     template: `<div class="text-xs-center">
