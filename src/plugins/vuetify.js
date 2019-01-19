@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import Vuetify, { VApp, VCard, VCardText, VContainer, VFlex, VIcon, VLayout } from 'vuetify/lib'
+import Vuetify, { VApp, VBtn, VCard, VCardText, VContainer, VFlex, VHover, VIcon, VLayout, VTooltip } from 'vuetify/lib'
 import 'vuetify/src/stylus/app.styl'
 
 Vue.use(Vuetify, {
@@ -15,11 +15,14 @@ Vue.use(Vuetify, {
   },
   components: {
     VApp,
+    VBtn,
     VCard,
     VCardText,
     VContainer,
     VFlex,
+    VHover,
     VIcon,
-    VLayout
+    VLayout,
+    VTooltip
   }
 })

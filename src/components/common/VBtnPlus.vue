@@ -7,64 +7,83 @@
       >
         <v-btn
           slot="activator"
-          flat
-          :icon="hasIcon(item)"
-          :color="hover ? toolbarTextColorHover() : toolbarTextColor()"
-          :class="{ 'text-capitalize': item.label, 'text-lowercase': item.icon }"
+          :theme="theme"
+          :align="align"
+          :justify="justify"
+          :disabled="disabled"
+          :depressed="type === 'depressed'"
+          :block="type === 'block'"
+          :flat="type === 'flat'"
+          :fab="type === 'fab'"
+          :icon="type === 'icon'"
+          :outline="type === 'outline'"
+          :raised="type === 'raised'"
+          :round="type === 'round'"
+          :color="hover ? colorHover : color"
+          :class="{ 'text-capitalize': label, 'text-lowercase': icon }"
+          :size="size"
+          @click="onClick()"
         >
-          <span v-if="item.label">{{ item.label }}</span>
-          <v-icon v-else>{{ item.icon }}</v-icon>
+          <span v-if="label">{{ label }}</span>
+          <v-icon v-else>{{ icon }}</v-icon>
         </v-btn>
-        <span>{{ item.tooltip }}</span>
+        <span>{{ tooltip }}</span>
       </v-tooltip>
     </v-hover>
     <v-hover v-else>
       <v-btn
         slot-scope="{ hover }"
-        flat
-        :icon="hasIcon(item)"
-        :color="hover ? toolbarTextColorHover() : toolbarTextColor()"
-        :class="{ 'text-capitalize': item.label, 'text-lowercase': item.icon }"
+        :theme="theme"
+        :align="align"
+        :justify="justify"
+        :disabled="disabled"
+        :depressed="type === 'depressed'"
+        :block="type === 'block'"
+        :flat="type === 'flat'"
+        :fab="type === 'fab'"
+        :icon="type === 'icon'"
+        :outline="type === 'outline'"
+        :raised="type === 'raised'"
+        :round="type === 'round'"
+        :color="hover ? colorHover : color"
+        :class="{ 'text-capitalize': label, 'text-lowercase': icon }"
+        :size="size"
+        @click="onClick()"
       >
-        <span v-if="item.label">{{ item.label }}</span>
-        <v-icon v-else>{{ item.icon }}</v-icon>
+        <span v-if="label">{{ label }}</span>
+        <v-icon v-else>{{ icon }}</v-icon>
       </v-btn>
     </v-hover>
   </div>
 </template>
 
 <script>
+import VueTypes from 'vue-types'
 export default {
   name: 'v-btn-plus',
   props: {
-    color: {
-      type: String,
-      required: false,
-      default: 'primary'
-    },
-    icon: {
-      type: String,
-      required: false,
-      default: null
-    },
-    label: {
-      type: String,
-      required: false,
-      default: 'label'
-    },
-    tooltip: {
-      type: String,
-      required: false,
-      default: null
-    }
+    align: VueTypes.oneOf(['bottom', 'top']),
+    justify: VueTypes.oneOf(['left', 'right']),
+    color: VueTypes.string.def('primary'),
+    colorHover: VueTypes.string.def('secondary'),
+    disabled: VueTypes.bool.def(false),
+    icon: VueTypes.string,
+    label: VueTypes.string,
+    position: VueTypes.oneOf(['left', 'right']),
+    tooltip: VueTypes.string,
+    size: VueTypes.oneOf(['small', 'medium', 'large']).def('small'),
+    theme: VueTypes.oneOf(['light', 'dark']),
+    type: VueTypes.oneOf(['block', 'depressed', 'fab', 'flat', 'icon', 'outline', 'raised', 'round']).def('raised')
   },
-  data: () => ({}),
   methods: {
     onClick() {
       this.$emit('click')
-    },
-    hasIcon() {
-      return this.icon && this.icon.length > 0
+    }
+  },
+  created: function() {
+    // Workaround as prop validation on multiple props is not possible
+    if (!this.icon && !this.label) {
+      console.error('[Vue warn]: Missing required prop, specify at least one of the following: "label" or "icon"')
     }
   }
 }

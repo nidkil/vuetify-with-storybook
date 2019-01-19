@@ -19,27 +19,14 @@
 </template>
 
 <script>
+import VueTypes from 'vue-types'
 export default {
   name: 'v-stats-card',
   props: {
-    icon: {
-      type: String,
-      required: false,
-      default: 'mdi-information-outline'
-    },
-    title: {
-      type: String,
-      required: true
-    },
-    subTitle: {
-      type: String,
-      required: true
-    },
-    color: {
-      type: String,
-      required: false,
-      default: 'grey'
-    }
+    icon: VueTypes.string.def('mdi-information-outline'),
+    title: VueTypes.string.isRequired,
+    subTitle: VueTypes.string.isRequired,
+    color: VueTypes.string.def('grey')
   }
 }
 </script>

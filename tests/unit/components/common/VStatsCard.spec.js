@@ -1,5 +1,6 @@
 import { createLocalVue, shallowMount } from '@vue/test-utils'
 import { SilenceWarnHack } from '@tst/helpers/SilenceWarnHack'
+import { spyConsole } from '@tst/helpers/test-utils'
 import Vuetify from 'vuetify'
 import VStatsCard from '@/components/common/VStatsCard.vue'
 
@@ -45,18 +46,16 @@ describe('VStatsCard.vue', () => {
     expect(wrapper.html()).toContain(`class="text-xs-center py-3 white--text ${color}"`)
   })
 
-  it('throws an exception if title is not specified', () => {
-    const title = 'My title'
-    const subTitle = 'My subTitle'
-    const color = 'red'
-    const icon = 'mdi-information'
-    const wrapper = shallowMount(VStatsCard, {
-      localVue: localVue,
-      propsData: { color, icon, title, subTitle }
+  describe('test prop warnings', () => {
+    let spy = spyConsole()
+
+    it('displays two warning messages if title and subTitle is not specified', () => {
+      shallowMount(VStatsCard, {
+        localVue: localVue
+      })
+      expect(console.error).toHaveBeenCalledTimes(2)
+      expect(spy.console.mock.calls[0][0]).toContain('[Vue warn]: Missing required prop: "title"')
+      expect(spy.console.mock.calls[1][0]).toContain('[Vue warn]: Missing required prop: "subTitle"')
     })
-    expect(wrapper.text()).toMatch(title)
-    expect(wrapper.text()).toMatch(subTitle)
-    expect(wrapper.html()).toContain(`<v-icon-stub size="56px" color="${color}">${icon}</v-icon-stub>`)
-    expect(wrapper.html()).toContain(`class="text-xs-center py-3 white--text ${color}"`)
   })
 })
