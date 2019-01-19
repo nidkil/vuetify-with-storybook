@@ -4,13 +4,16 @@
 <p align="center" style="font-size: 2.0em"><b>Setting up Storybook with Vuetify</b></p>
 <p align="center" style="font-size: 1.0em">Learn how to set and use it the proper way</p>
 
-[![Build status](https://travis-ci.com/nidkil/vuetify-with-storybook.svg?branch=master)](https://travis-ci.com/nidkil/vuetify-with-storybook)
+[![Build Status](https://travis-ci.com/nidkil/vuetify-with-storybook.svg?branch=master)](https://travis-ci.com/nidkil/vuetify-with-storybook)
 [![Vue 2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/)
 [![Vue CLI 3](https://img.shields.io/badge/vue%20cli-3-brightgreen.svg)](https://cli.vuejs.org/)
 [![Vuetify](https://img.shields.io/badge/vuetify-1.3.x-blue.svg)](https://http://vuetifyjs.com//)
 [![Storybook](https://img.shields.io/badge/storybook-4.1.x-ff69b4.svg)](https://storybook.js.org/)
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
-[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)
+[![Commitizen Friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+
+[![License MIT](https://img.shields.io/badge/license-mit-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)
+[![Code of Conduct](https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat-square)](https://github.com/kentcdodds/cross-env/blob/master/other/CODE_OF_CONDUCT.md)
 [![HitCount](http://hits.dwyl.com/nidkil/vuetify-with-storybook.svg)](http://hits.dwyl.com/dwyl/start-here)
 
 ## Introduction
@@ -27,6 +30,7 @@ I struggled to get Storybook to work with Vuetify. In this repository I have doc
 - [Important](#important)
 - [Useful links](#useful-links)
 - [Create project manually](#create-project-manually)
+- [Addons](#addons)
 - [Project setup](#project-setup)
 - [Misc](#misc)
 - [Roadmap](#roadmap)
@@ -335,13 +339,13 @@ The following section describes the steps that need to be execute to manually cr
 
 [Go to Table of Contents](#toc)
 
-## Addon
+## Addons
 
 This section only describes those addon's that require special instructions to work correctly with Vue or Vuetify.
 
-### addon-backgrounds
+### Backgrounds Addon
 
-The `addon-backgrounds` is used to change background colors inside the preview in Storybook. To get the background addon to work with Vuetify requires a hack to VApp, as it sets and controls the background color. To let the background addon control the background color we need to set the background of VApp to transparent. In `./config/storybook/config.js` change the following:
+The Backgrounds Addon is used to change background colors inside the preview in Storybook. To get the background addon to work with Vuetify requires a hack to VApp, as it sets and controls the background color. To let the background addon control the background color we need to set the background of VApp to transparent. In `./config/storybook/config.js` change the following:
 
 ```js
 addDecorator(() => ({
@@ -359,9 +363,9 @@ addDecorator(() => ({
 }))
 ```
 
-### addon-viewport
+### Viewport Addon
 
-The Viewport addon allows stories to be displayed in different sizes and layouts in Storybook. This helps build responsive components inside of Storybook. Vuetify has a 12 point grid system. Built using flex-box, the grid is used to layout an application's content. It contains 5 types of media breakpoints that are used for targeting specific screen sizes and orientations. These media types can be added to the viewports of the Viewport addon to simplify testing how Vuetify components respond to different media breakpoints.
+The Viewport Addon allows stories to be displayed in different sizes and layouts in Storybook. This helps build responsive components inside of Storybook. Vuetify has a 12 point grid system. Built using flex-box, the grid is used to layout an application's content. It contains 5 types of media breakpoints that are used for targeting specific screen sizes and orientations. These media types can be added to the viewports of the Viewport addon to simplify testing how Vuetify components respond to different media breakpoints.
 
  Add the following to the `./config/storybook/config.js` file:
 
@@ -416,6 +420,58 @@ The Viewport addon allows stories to be displayed in different sizes and layouts
 ```
 
 **Note** Vuetify MD viewport is set as default, so that it is selected when a story is opened.
+
+### Storysource Addon
+
+This Storysource Addon is used to show stories source in the Storyboard addon panel. Getting it to work with Vue CLI 3 is tricky as it abstracts away the webpack config. The internal webpack config is maintained using webpack-chain . The library provides an abstraction over the raw webpack config, with the ability to define named loader rules and named plugins, and later "tap" into those rules and modify their options. To tweak the webpack config you need to add or modify the `vue.config.js` file that is located in the project root. Add the following to this file:
+
+```js
+module.exports = {
+  chainWebpack: config => {
+    if (process.env.STORYBOOK && process.env.STORYBOOK.trim() === 'true') {
+      console.info('info => Updating webpack using chain-webpack')
+      config.module
+        .rule('addon-storysource')
+        .enforce()
+        .pre()
+        .test(/\.stories\.jsx?$/)
+        .use('@storybook/addon-storysource/loader')
+        .loader('@storybook/addon-storysource/loader')
+        .options({
+          semi: false,
+          printWidth: 120,
+          singleQuote: true
+        })
+        .end()
+    }
+  }
+}
+```
+
+**NOTE** We only want the Storysource Addon to kick in when running Storybook so we have to make the rule conditional. To do this we will check if the environment variable `STORYBOOK` is set. If it is the rule is added, otherwise it is ignored. We will set the environment variable in the storybook scripts in the `package.json` file:
+
+```
+{
+  "scripts": {
+    "storybook:build": "SET STORYBOOK=true & vue-cli-service storybook:build -c config/storybook",
+    "storybook:serve": "SET STORYBOOK=true & vue-cli-service storybook:serve -p 6006 -c config/storybook"
+  }
+}
+```
+
+**PRO TIP** `vue-cli-service` exposes the `inspect` command for inspecting the resolved webpack config. The command will print the resolved webpack config to stdout, which also contains hints on how to access rules and plugins via chaining. Add the following entry to the `scripts` section in the `package.json` file to easily call the `inspect` command:
+
+```
+{
+  "scripts": {
+    "webpack:inspect": "SET STORYBOOK=true & vue inspect > webpack.config.inspect.js"
+  }
+}
+```
+
+This redirects the output to the `webpack.config.inspect.js` file for easier inspection.
+
+[Go to Table of Contents](#toc)
 
 ## Project setup
 
@@ -531,8 +587,8 @@ Currently the following is on the roadmap.
 - [ ] Add links-addon
 - [ ] Add notes-addon
 - [ ] Add options-addon
-- [ ] Add storysource-addon
-- [ ] Add viewport-addon
+- [x] Add storysource-addon(https://github.com/storybooks/storybook/tree/master/addons/storysource)
+- [x] Add [viewport-addon](https://github.com/storybooks/storybook/tree/master/addons/viewportg)
 
 Any other suggestions? Please submit an issue.
 
