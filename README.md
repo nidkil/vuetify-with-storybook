@@ -10,7 +10,7 @@
 [![Storybook](https://img.shields.io/badge/storybook-4.1.x-ff69b4.svg)](https://storybook.js.org/)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)
-[![HitCount](http://hits.dwyl.com/nidkil/vuetify-with-storybook.svg)](http://hits.dwyl.com/dwyl/start-here)
+[![HitCount](http://hits.dwyl.com/nidkil/vuetify-with-storybook.svg)](http://hits.dwyl.com/dwyl/start-here) [![Greenkeeper badge](https://badges.greenkeeper.io/nidkil/vuetify-with-storybook.svg)](https://greenkeeper.io/)
 
 ## Introduction
 
