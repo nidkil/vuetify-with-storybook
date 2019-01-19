@@ -339,9 +339,9 @@ The following section describes the steps that need to be execute to manually cr
 
 This section only describes those addon's that require special instructions to work correctly with Vue or Vuetify.
 
-### addon-background
+### addon-backgrounds
 
-To get the background addon to work with Vuetify requires a hack to VApp, as it sets and controls the background color. To let the background addon control the background color we need to set the background of VApp to transparent. In `./config/storybook/config.js` change the following:
+The `addon-backgrounds` is used to change background colors inside the preview in Storybook. To get the background addon to work with Vuetify requires a hack to VApp, as it sets and controls the background color. To let the background addon control the background color we need to set the background of VApp to transparent. In `./config/storybook/config.js` change the following:
 
 ```js
 addDecorator(() => ({
@@ -358,6 +358,64 @@ addDecorator(() => ({
   style: '.theme--light.application { background-color: transparent; }'
 }))
 ```
+
+### addon-viewport
+
+The Viewport addon allows stories to be displayed in different sizes and layouts in Storybook. This helps build responsive components inside of Storybook. Vuetify has a 12 point grid system. Built using flex-box, the grid is used to layout an application's content. It contains 5 types of media breakpoints that are used for targeting specific screen sizes and orientations. These media types can be added to the viewports of the Viewport addon to simplify testing how Vuetify components respond to different media breakpoints.
+
+ Add the following to the `./config/storybook/config.js` file:
+
+ ```js
+ import { configureViewport, INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
+
+ const vuetifyViewports = {
+   VuetifyLg: {
+     name: 'Vuetify LG',
+     styles: {
+       width: '1904px'
+     },
+     type: 'desktop'
+   },
+   VuetifyXs: {
+     name: 'Vuetify XS',
+     styles: {
+       width: '600px'
+     },
+     type: 'mobile'
+   },
+   VuetifySm: {
+     name: 'Vuetify SM',
+     styles: {
+       width: '960px'
+     },
+     type: 'mobile'
+   },
+   VuetifyMd: {
+     name: 'Vuetify MD',
+     styles: {
+       width: '1264px'
+     },
+     type: 'tablet'
+   },
+   VuetifyXl: {
+     name: 'Vuetify XL',
+     styles: {
+       width: '4096px'
+     },
+     type: 'desktop'
+   }
+ }
+
+ configureViewport({
+   defaultViewport: 'VuetifyMd',
+   viewports: {
+     ...vuetifyViewports,
+     ...INITIAL_VIEWPORTS
+   }
+ })
+```
+
+**Note** Vuetify MD viewport is set as default, so that it is selected when a story is opened.
 
 ## Project setup
 
