@@ -473,6 +473,8 @@ module.exports = {
 
 ## Project setup
 
+### Install dependencies
+
 ```
 npm install
 ```
