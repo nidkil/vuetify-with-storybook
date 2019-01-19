@@ -4,17 +4,21 @@
 <p align="center" style="font-size: 2.0em"><b>Setting up Storybook with Vuetify</b></p>
 <p align="center" style="font-size: 1.0em">Learn how to set and use it the proper way</p>
 
-[![Build Status](https://travis-ci.com/nidkil/vuetify-with-storybook.svg?branch=master)](https://travis-ci.com/nidkil/vuetify-with-storybook)
-[![Vue 2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/)
-[![Vue CLI 3](https://img.shields.io/badge/vue%20cli-3-brightgreen.svg)](https://cli.vuejs.org/)
-[![Vuetify](https://img.shields.io/badge/vuetify-1.3.x-blue.svg)](https://http://vuetifyjs.com//)
-[![Storybook](https://img.shields.io/badge/storybook-4.1.x-ff69b4.svg)](https://storybook.js.org/)
-[![Commitizen Friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+<p align="center">
+  [![Build Status](https://travis-ci.com/nidkil/vuetify-with-storybook.svg?branch=master)](https://travis-ci.com/nidkil/vuetify-with-storybook)
+  [![Vue 2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/)
+  [![Vue CLI 3](https://img.shields.io/badge/vue%20cli-3-brightgreen.svg)](https://cli.vuejs.org/)
+  [![Vuetify](https://img.shields.io/badge/vuetify-1.3.x-blue.svg)](https://http://vuetifyjs.com//)
+  [![Storybook](https://img.shields.io/badge/storybook-4.1.x-ff69b4.svg)](https://storybook.js.org/)
+  [![Commitizen Friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+</p>
 
-[![License MIT](https://img.shields.io/badge/license-mit-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)
-[![Code of Conduct](https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat-square)](https://github.com/kentcdodds/cross-env/blob/master/other/CODE_OF_CONDUCT.md)
-[![HitCount](http://hits.dwyl.com/nidkil/vuetify-with-storybook.svg)](http://hits.dwyl.com/dwyl/start-here)
+<p align="center">
+  [![License MIT](https://img.shields.io/badge/license-mit-yellow.svg)](https://github.com/nidkil/vuetify-with-storybook/blob/master/LICENSE.md)
+  [![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/nidkil/vuetify-with-storybook/blob/master/CONTRIBUTING.md)
+  [![Code of Conduct](https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat-square)](https://github.com/nidkil/vuetify-with-storybook/blob/master/CODE-OF-CONDUCT.md)
+  [![HitCount](http://hits.dwyl.com/nidkil/vuetify-with-storybook.svg)](http://hits.dwyl.com/dwyl/start-here)
+</p>
 
 ## Introduction
 
