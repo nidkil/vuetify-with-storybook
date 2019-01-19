@@ -1,8 +1,8 @@
 <p align="center">
   <img src="./public/vuetify-with-storybook-logo.png" alt="Setting up Storybook with Vuetify logo" width="500"/>
 </p>
-<p align="center" style="font-size: 2.0em"><b>Setting up Storybook with Vuetify</b></p>
-<p align="center" style="font-size: 1.0em">Learn how to set and use it the proper way</p>
+<p align="center" style="font-size: 3.0em"><b>Setting up Storybook with Vuetify</b></p>
+<p align="center" style="font-size: 1.0em">Learn how to setup and use it the correct way</p>
 
 [![Build Status](https://travis-ci.com/nidkil/vuetify-with-storybook.svg?branch=master)](https://travis-ci.com/nidkil/vuetify-with-storybook)
 [![Vue 2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/)
@@ -459,7 +459,7 @@ module.exports = {
 }
 ```
 
-**PRO TIP** `vue-cli-service` exposes the `inspect` command for inspecting the resolved webpack config. The command will print the resolved webpack config to stdout, which also contains hints on how to access rules and plugins via chaining. Add the following entry to the `scripts` section in the `package.json` file to easily call the `inspect` command:
+**PRO TIP** `vue-cli-service` exposes the `inspect` command for inspecting the resolved webpack config. The command will print the resolved webpack config to stdout, which also contains hints on how to access rules and plugins via chaining. Add the following entry to the `scripts` section in the `package.json` file to easily call the `inspect` command and redirect the output to the `webpack.config.inspect.js` file for easier inspection:
 
 ```
 {
@@ -468,8 +468,6 @@ module.exports = {
   }
 }
 ```
-
-This redirects the output to the `webpack.config.inspect.js` file for easier inspection.
 
 [Go to Table of Contents](#toc)
 

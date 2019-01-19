@@ -1,14 +1,14 @@
 {
   "name": "vuetify-with-storybook",
   "version": "0.2.0",
-  "description": "Setting up Storybook with Vuetify",
+  "description": "Setting up Storybook with Vuetify the right way",
   "keywords": [
     "Vue",
     "Vue CLI 3",
     "Vuetify",
     "Storybook",
     "visual testing",
-    "component developing"
+    "component development"
   ],
   "author": "nidkil <info@nidkil.com> (https://nidkil.me)",
   "license": "MIT",
