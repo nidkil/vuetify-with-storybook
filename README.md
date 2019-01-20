@@ -1,52 +1,68 @@
-<p align="center">
-  <img src="./public/vuetify-with-storybook-logo.png" alt="Setting up Storybook with Vuetify logo" width="500"/>
+<div align="center" markdown="1" style="text-align:center">
+  <p>
+    <img src="./public/vuetify-with-storybook-logo.png" alt="Setting up Storybook with Vuetify logo" width="500"/>
+  </p>
+  <p style="font-size: 2.0em"><b>Setting up Storybook with Vuetify and Vue CLI 3</b></p>
+  <p style="font-size: 1.0em">Learn how to setup and use it the correct way</p>
+
+  <div class="badge-npmdownloads">
+    <a href="https://travis-ci.com/nidkil/vuetify-with-storybook">
+      <img src="https://travis-ci.com/nidkil/vuetify-with-storybook.svg?branch=master" alt="Build Status">
+    </a>
+    <a href="https://greenkeeper.io/">
+      <img src="https://badges.greenkeeper.io/nidkil/vuetify-with-storybook.svg" alt="Greenkeeper">
+    </a>
+    <a href="https://vuejs.org/">
+      <img src="https://img.shields.io/badge/vue-2.x-brightgreen.svg" alt="Vue 2">
+    </a>
+    <a href="https://cli.vuejs.org/">
+      <img src="https://img.shields.io/badge/vue%20cli-3-brightgreen.svg" alt="Vue CLI 3" />
+    </a>
+    <a href="https://vuetifyjs.com">
+      <img src="https://img.shields.io/badge/vuetify-1.x-1697f6.svg" alt="Vuetify" />
+    </a>
+    <a href="https://storybook.js.org/">
+      <img src="https://img.shields.io/badge/storybook-4.1.x-ff69b4.svg" alt="Storybook">
+    </a>
+  </div>
+
+  <div class="badge-npmdownloads">
+    <a href="http://commitizen.github.io/cz-cli/">
+      <img src="https://img.shields.io/badge/commitizen-friendly-brightgreen.svg" alt="Commitizen Friendly">
+    </a>
+    <a href="https://github.com/semantic-release/semantic-release">
+      <img src="https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg" alt="semantic-release">
+    </a>
+    <a href="https://semver.org/spec/v2.0.0.html">
+      <img src="https://img.shields.io/badge/semver-2.0.0-blue.svg" alt="semver">
+    </a>
+  </div>
+
+  <div class="badge-npmdownloads">
+    <a href="https://github.com/nidkil/vuetify-with-storybook/blob/master/LICENSE.md" title="View the License>
+      <img src="https://img.shields.io/badge/license-mit-yellow.svg" alt="License MIT">
+    </a>
+    <a href="https://github.com/nidkil/vuetify-with-storybook/blob/master/CONTRIBUTING.md" title="View the Contributing">
+      <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat" alt="Contributions Welcome">
+    </a>
+    <a href="https://github.com/nidkil/vuetify-with-storybook/blob/master/CODE-OF-CONDUCT.md" title="View the Code of Conduct">
+      <img src="https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat-square" alt="Code of Conduct">
+    </a>
+    <a href="http://hits.dwyl.com/dwyl/start-here">
+      <img src="http://hits.dwyl.com/nidkil/vuetify-with-storybook.svg" alt="Hit Count" />
+    </a>
+  </div>
+
+  <p>
+    &nbsp;<br>
+  </p>
+</div>
+
+> I struggled to get Storybook to work with Vuetify and Vue CLI 3. In this repository I have documented how I got it up and running the correct way. Hopefully it will give others a kick start.
+
+<p>
+  &nbsp;<br>
 </p>
-<p align="center" style="font-size: 3.0em"><b>Setting up Storybook with Vuetify</b></p>
-<p align="center" style="font-size: 1.0em">Learn how to setup and use it the correct way</p>
-
-<div class="badge-npmdownloads">
-  <a href="https://travis-ci.com/nidkil/vuetify-with-storybook">
-    <img src="https://travis-ci.com/nidkil/vuetify-with-storybook.svg?branch=master" alt="Build Status">
-  </a>
-  <a href="https://greenkeeper.io/">
-    <img src="https://badges.greenkeeper.io/nidkil/vuetify-with-storybook.svg" alt="Greenkeeper">
-  </a>
-  <a href="https://vuejs.org/">
-    <img src="https://img.shields.io/badge/vue-2.x-brightgreen.svg" alt="Vue 2">
-  </a>
-  <a href="https://cli.vuejs.org/">
-    <img src="https://img.shields.io/badge/vue%20cli-3-brightgreen.svg" alt="Vue CLI 3" />
-  </a>
-  <a href="https://storybook.js.org/">
-    <img src="https://img.shields.io/badge/storybook-4.1.x-ff69b4.svg" alt="Storybook">
-  </a>
-  <a href="http://commitizen.github.io/cz-cli/">
-    <img src="https://img.shields.io/badge/commitizen-friendly-brightgreen.svg" alt="Commitizen Friendly">
-  </a>
-  <a href="https://github.com/semantic-release/semantic-release">
-    <img src="https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg" alt="semantic-release">
-  </a>
-  <a href="https://semver.org/spec/v2.0.0.html">
-    <img src="https://img.shields.io/badge/semver-2.0.0-blue.svg" alt="semver">
-  </a>
-</div>
-
-<div class="badge-npmdownloads">
-  <a href="https://github.com/nidkil/vuetify-with-storybook/blob/master/LICENSE.md" title="View the License>
-    <img src="https://img.shields.io/badge/license-mit-yellow.svg" alt="License MIT">
-  </a>
-  <a href="https://github.com/nidkil/vuetify-with-storybook/blob/master/CONTRIBUTING.md" title="View the Contributing">
-    <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat" alt="Contributions Welcome">
-  </a>
-  <a href="https://github.com/nidkil/vuetify-with-storybook/blob/master/CODE-OF-CONDUCT.md" title="View the Code of Conduct">
-    <img src="https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat-square" alt="Code of Conduct">
-  </a>
-  <a href="http://hits.dwyl.com/dwyl/start-here">
-    <img src="http://hits.dwyl.com/nidkil/vuetify-with-storybook.svg" alt="Hit Count" />
-  </a>
-</div>
-
-> I struggled to get Storybook to work with Vuetify. In this repository I have documented how I got it up and running the correct way. Hopefully it will give others a kick start.
 
 <a name="toc">
   <strong>Table of Contents</strong>
@@ -85,6 +101,7 @@ So you have the choice to follow along and configure your project yourself and r
 - [Vuetify v1.3.0](https://vuetifyjs.com/en/) using the a la carte setup
 - [Storybook v4.1.0](https://storybook.js.org/)
 - [Material Design Icons (MDI)](https://materialdesignicons.com/)
+- [vue-types](https://github.com/dwightjack/vue-types)
 
 [Go to Table of Contents](#toc)
 

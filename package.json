@@ -1,7 +1,7 @@
 {
   "name": "vuetify-with-storybook",
   "version": "0.2.0",
-  "description": "Setting up Storybook with Vuetify the right way",
+  "description": "Setting up Storybook with Vuetify and Vue CLI 3 the correct way",
   "keywords": [
     "vue",
     "vue-2",
