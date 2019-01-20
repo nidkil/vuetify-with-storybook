@@ -16,13 +16,13 @@
       <img src="https://img.shields.io/badge/vue-2.x-brightgreen.svg" alt="Vue 2">
     </a>
     <a href="https://cli.vuejs.org/">
-      <img src="https://img.shields.io/badge/vue%20cli-3-brightgreen.svg" alt="Vue CLI 3" />
+      <img src="https://img.shields.io/badge/vue%20cli-3.x-brightgreen.svg" alt="Vue CLI 3" />
     </a>
     <a href="https://vuetifyjs.com">
       <img src="https://img.shields.io/badge/vuetify-1.x-1697f6.svg" alt="Vuetify" />
     </a>
     <a href="https://storybook.js.org/">
-      <img src="https://img.shields.io/badge/storybook-4.1.x-ff69b4.svg" alt="Storybook">
+      <img src="https://img.shields.io/badge/storybook-4.x-ff69b4.svg" alt="Storybook">
     </a>
   </div>
 
@@ -36,13 +36,10 @@
     <a href="https://semver.org/spec/v2.0.0.html">
       <img src="https://img.shields.io/badge/semver-2.0.0-blue.svg" alt="semver">
     </a>
-  </div>
-
-  <div class="badge-npmdownloads">
-    <a href="https://github.com/nidkil/vuetify-with-storybook/blob/master/LICENSE.md" title="View the License>
+    <a href="https://github.com/nidkil/vuetify-with-storybook/blob/master/LICENSE.md" title="View the License">
       <img src="https://img.shields.io/badge/license-mit-yellow.svg" alt="License MIT">
     </a>
-    <a href="https://github.com/nidkil/vuetify-with-storybook/blob/master/CONTRIBUTING.md" title="View the Contributing">
+    <a href="https://github.com/nidkil/vuetify-with-storybook/blob/master/CONTRIBUTING.md" title="View the Contribution Guidelines">
       <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat" alt="Contributions Welcome">
     </a>
     <a href="https://github.com/nidkil/vuetify-with-storybook/blob/master/CODE-OF-CONDUCT.md" title="View the Code of Conduct">
