@@ -3,12 +3,17 @@
   "version": "0.2.0",
   "description": "Setting up Storybook with Vuetify the right way",
   "keywords": [
-    "Vue",
-    "Vue CLI 3",
-    "Vuetify",
-    "Storybook",
-    "visual testing",
-    "component development"
+    "vue",
+    "vue-2",
+    "vuejs",
+    "vuejs-2",
+    "vue-cli-3",
+    "vuetify",
+    "vuetifyjs",
+    "storybook",
+    "visual-testing",
+    "vue-components",
+    "component-development"
   ],
   "author": "nidkil <info@nidkil.com> (https://nidkil.me)",
   "license": "MIT",

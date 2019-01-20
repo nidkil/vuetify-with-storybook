@@ -4,22 +4,49 @@
 <p align="center" style="font-size: 3.0em"><b>Setting up Storybook with Vuetify</b></p>
 <p align="center" style="font-size: 1.0em">Learn how to setup and use it the correct way</p>
 
-[![Build Status](https://travis-ci.com/nidkil/vuetify-with-storybook.svg?branch=master)](https://travis-ci.com/nidkil/vuetify-with-storybook)
-[![Greenkeeper](https://badges.greenkeeper.io/nidkil/vuetify-with-storybook.svg)](https://greenkeeper.io/)
-[![Vue 2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/)
-[![Vue CLI 3](https://img.shields.io/badge/vue%20cli-3-brightgreen.svg)](https://cli.vuejs.org/)
-[![Vuetify](https://img.shields.io/badge/vuetify-1.3.x-blue.svg)](https://http://vuetifyjs.com//)
-[![Storybook](https://img.shields.io/badge/storybook-4.1.x-ff69b4.svg)](https://storybook.js.org/)
-[![Commitizen Friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+<div class="badge-npmdownloads">
+  <a href="https://travis-ci.com/nidkil/vuetify-with-storybook">
+    <img src="https://travis-ci.com/nidkil/vuetify-with-storybook.svg?branch=master" alt="Build Status">
+  </a>
+  <a href="https://greenkeeper.io/">
+    <img src="https://badges.greenkeeper.io/nidkil/vuetify-with-storybook.svg" alt="Greenkeeper">
+  </a>
+  <a href="https://vuejs.org/">
+    <img src="https://img.shields.io/badge/vue-2.x-brightgreen.svg" alt="Vue 2">
+  </a>
+  <a href="https://cli.vuejs.org/">
+    <img src="https://img.shields.io/badge/vue%20cli-3-brightgreen.svg" alt="Vue CLI 3" />
+  </a>
+  <a href="https://storybook.js.org/">
+    <img src="https://img.shields.io/badge/storybook-4.1.x-ff69b4.svg" alt="Storybook">
+  </a>
+  <a href="http://commitizen.github.io/cz-cli/">
+    <img src="https://img.shields.io/badge/commitizen-friendly-brightgreen.svg" alt="Commitizen Friendly">
+  </a>
+  <a href="https://github.com/semantic-release/semantic-release">
+    <img src="https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg" alt="semantic-release">
+  </a>
+  <a href="https://semver.org/spec/v2.0.0.html">
+    <img src="https://img.shields.io/badge/semver-2.0.0-blue.svg" alt="semver">
+  </a>
+</div>
 
-[![License MIT](https://img.shields.io/badge/license-mit-yellow.svg)](https://github.com/nidkil/vuetify-with-storybook/blob/master/LICENSE.md)
-[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/nidkil/vuetify-with-storybook/blob/master/CONTRIBUTING.md)
-[![Code of Conduct](https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat-square)](https://github.com/nidkil/vuetify-with-storybook/blob/master/CODE-OF-CONDUCT.md)
-[![HitCount](http://hits.dwyl.com/nidkil/vuetify-with-storybook.svg)](http://hits.dwyl.com/dwyl/start-here)
+<div class="badge-npmdownloads">
+  <a href="https://github.com/nidkil/vuetify-with-storybook/blob/master/LICENSE.md" title="View the License>
+    <img src="https://img.shields.io/badge/license-mit-yellow.svg" alt="License MIT">
+  </a>
+  <a href="https://github.com/nidkil/vuetify-with-storybook/blob/master/CONTRIBUTING.md" title="View the Contributing">
+    <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat" alt="Contributions Welcome">
+  </a>
+  <a href="https://github.com/nidkil/vuetify-with-storybook/blob/master/CODE-OF-CONDUCT.md" title="View the Code of Conduct">
+    <img src="https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat-square" alt="Code of Conduct">
+  </a>
+  <a href="http://hits.dwyl.com/dwyl/start-here">
+    <img src="http://hits.dwyl.com/nidkil/vuetify-with-storybook.svg" alt="Hit Count" />
+  </a>
+</div>
 
-## Introduction
-
-I struggled to get Storybook to work with Vuetify. In this repository I have documented how I got it up and running the proper way. Hopefully it will give others a kick start.
+> I struggled to get Storybook to work with Vuetify. In this repository I have documented how I got it up and running the correct way. Hopefully it will give others a kick start.
 
 <a name="toc">
   <strong>Table of Contents</strong>
@@ -67,7 +94,7 @@ The following two points are key to getting Storybook to work correctly with Vue
 
 1) The Vuetify components must be imported individually from 'vuetify/lib' and added as components to `Vue.use` when initializing Vuetify, see the [Vuetify documentation](https://vuetifyjs.com/en/framework/a-la-carte#importing-components) for more information. This is done in the `./src/plugins/vuetify.js` plugin file. If a story isn't displaying correctly in Storybook and it does work correctly when running normally, always check that all Vuetify components it uses are imported!
 
-  > **IMPORTANT** Storybook does not work with `vuetify-loader`, at least I did not get it to work.
+    > **IMPORTANT** Storybook does not work with `vuetify-loader`, at least I did not get it to work.
 
 2) The font must be imported using the `preview-head.html` file.
 
