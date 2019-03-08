@@ -55,7 +55,7 @@
     "@mdi/font": "^3.3.92",
     "@storybook/addon-actions": "^5.0.1",
     "@storybook/addon-backgrounds": "^4.1.7",
-    "@storybook/addon-links": "^4.1.0",
+    "@storybook/addon-links": "^5.0.1",
     "@storybook/addon-storysource": "^4.1.7",
     "@storybook/addon-viewport": "^4.1.7",
     "@vue/cli-plugin-babel": "^3.0.4",
