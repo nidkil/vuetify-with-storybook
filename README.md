@@ -85,7 +85,7 @@
 
 ## Inspiration
 
-The solution was inspired by [vue-vuetify-storybook](https://github.com/jsilva-pt/vue-vuetify-storybook), which shows a working example of Vue CLI 3, Vuetify and Storybook and a lot of other goodies. I tried to setup Storybook with my own repository taking this repo as an example, but I failed. The problem with this repository is, that it does not explain how it works. It also uses different configurations for the application itself and Storybook. This means that a component can work for the one but not for the other. I wanted a shared configuration, so that when a component works in either you no it works for the other. That shared configuration is the `./src/plugins/vuetify.js` plugin file that initializes Vuetify.
+The solution was inspired by [vue-vuetify-storybook](https://github.com/jsilva-pt/vue-vuetify-storybook), which shows a working example of Vue CLI 3, Vuetify and Storybook and a lot of other goodies. I tried to setup Storybook with my own repository taking this repo as an example, but I failed. The problem with this repository is, that it does not explain how it works. It also uses different configurations for the application itself and Storybook. This means that a component can work for the one but not for the other. I wanted a shared configuration, so that when a component works in either you know it works for the other. That shared configuration is the `./src/plugins/vuetify.js` plugin file that initializes Vuetify.
 
 So you have the choice to follow along and configure your project yourself and really understand how it works or just clone and use the repository. The choice is yours. Are you going to choose the red pill or the blue pill?
 
