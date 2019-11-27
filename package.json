@@ -58,7 +58,7 @@
     "@storybook/addon-links": "^4.1.0",
     "@storybook/addon-storysource": "^4.1.7",
     "@storybook/addon-viewport": "^4.1.7",
-    "@vue/cli-plugin-babel": "^3.0.4",
+    "@vue/cli-plugin-babel": "^4.1.1",
     "@vue/cli-plugin-eslint": "^3.0.4",
     "@vue/cli-plugin-unit-jest": "^3.0.4",
     "@vue/cli-service": "^3.0.4",
