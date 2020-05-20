@@ -46,7 +46,7 @@
     "vue": "^2.5.21",
     "vue-router": "^3.0.1",
     "vue-types": "^1.3.4",
-    "vuetify": "^1.3.0",
+    "vuetify": "^2.2.29",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
